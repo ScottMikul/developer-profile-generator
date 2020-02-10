@@ -8,10 +8,13 @@ const run = async () => {
     templatePath: path.join(__dirname, "templates", "basic"),
     
   });
-
+  console.log("starting");
   await html5ToPDF.start();
+  console.log("building");
   await html5ToPDF.build();
+  console.log("closing");
   await html5ToPDF.close();
+  console.log("exiting");
   process.exit(0);
 }
 
